@@ -179,3 +179,32 @@ html, body {
         width: 100%;
     }
 }
+
+@media (prefers-color-scheme: dark) {
+    :root {
+        --theme-color: #262626;
+        --theme-font-color: #6aa3f8;
+        --font-size: 1.4rem;
+        --box-shadow: 0px 0px 20px rgb(0 0 0 /10%);
+    }
+
+    .planner .todo-data .container .todo-list {
+        background-color: #343434;
+        color: #f2f2f2;
+    }
+
+    .planner .todo-data .container .todo-list:hover {
+        background-color: #1a1a1a;
+        color: #f2f2f2;
+    }
+
+    .planner #add_todo .container {
+        background-color: #282828;
+        color: var(--theme-font-color);
+    }
+
+    .planner #add_todo .input_todo input {
+        background-color: #282828;
+        color: #fff;
+    }
+}
