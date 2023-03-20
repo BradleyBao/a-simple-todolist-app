@@ -62,12 +62,22 @@ $(document).ready(function () {
 
         if (todoData[selfElementID].checked) {
             todoData[selfElementID].checked = false;
-            element.css("background-color", "#f8f8f8");
+
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                element.css("background-color", "#343434");
+            } else {
+                element.css("background-color", "#f8f8f8");
+            }
             icon.removeClass();
             icon.addClass("fa-regular fa-square selectIcon");
             title.css("text-decoration", "none");
         } else {
-            element.css("background-color", "#c3c3c3");
+            if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                element.css("background-color", "#232323");
+            } else {
+                element.css("background-color", "#c3c3c3");
+            }
+
             icon.removeClass();
             icon.addClass("fa-solid fa-square-check selectIcon");
             title.css("text-decoration", "line-through");
@@ -109,7 +119,12 @@ $(document).ready(function () {
                 const element = $(`#${i}`);
                 const title = element.find(".todo-title");
                 const icon = element.find(".selectIcon");
-                element.css("background-color", "#c3c3c3");
+
+                if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+                    element.css("background-color", "#343434");
+                } else {
+                    element.css("background-color", "#c3c3c3");
+                }
                 icon.removeClass();
                 icon.addClass("fa-solid fa-square-check selectIcon");
                 title.css("text-decoration", "line-through");
