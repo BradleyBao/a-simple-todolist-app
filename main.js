@@ -51,7 +51,8 @@ $(document).ready(function () {
     $("#delete_all").click(function () {
         todoData = {};
         totalID = Object.keys(todoData).length;
-        runInit(todoData, totalID)
+        runInit(todoData, totalID);
+        addData(todoData);
     })
 
     $(document).on("click",".selectIcon", function () {
