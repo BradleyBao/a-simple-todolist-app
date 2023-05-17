@@ -55,7 +55,7 @@ html, body {
 .planner .todo-data {
     display: flex;
     justify-content: center;
-    height: 80vh;
+    height: 78vh;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
@@ -109,7 +109,7 @@ html, body {
 }
 
 .planner #add_todo {
-    height: 10vh;
+    height: 12vh;
     display: flex;
     justify-content: center;
     align-content: center;
